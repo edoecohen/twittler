@@ -1,0 +1,67 @@
+body {
+	background: #ECF3F9;
+}
+.navbar {
+	background: #1E5473;
+}
+.navbar-brand {
+	color: white;
+	font-family: 'Lemon', cursive;
+	font-size: 2em;
+}
+.navbar-brand:hover {
+	color: #DFDFDF;
+}
+
+.main {
+	margin-top: 80px;
+}
+.main-col {
+	border: 1px solid #979797;
+	border-radius: 5px;
+	min-height: 600px;
+	background: white;
+	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+	padding: 0 0 25px 0;
+	margin-bottom: 100px;
+}
+
+.posts article {
+	margin: 10px 20px;
+	border-bottom: 1px solid #C0C0C0;
+	padding: 15px 0;
+}
+.user {
+	padding: 20px 20px 20px;
+	border-bottom: 1px solid #979797;
+	background: #E7E7E7;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+.user h1 {
+	margin: 0;
+	font-size: 2em;
+	font-family: 'Lemon', cursive;
+	color: #1E5473;
+}
+.posts h1, p {
+	font-size: 1em;
+	color: #545454;
+}
+.posts h1 {
+	font-weight: bold;
+}
+.posts h1:hover {
+	cursor: pointer;
+	color: #2D99C8;
+}
+.posts h2 {
+	font-size: 0.8em;
+	color: #C0C0C0;
+	font-weight: normal;
+	margin-left: 7px;
+}
+.posts h1, h2 {
+	display: inline-block;
+	margin: 0px;
+}
