@@ -4,7 +4,7 @@ body {
 .navbar {
 	background: #1E5473;
 }
-.navbar-brand {
+.navbar-brand, .navbar-brand:active, .navbar-brand:visited {
 	color: white;
 	font-family: 'Lemon', cursive;
 	font-size: 2em;
@@ -37,6 +37,7 @@ body {
 	background: #E7E7E7;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
+	display: none;
 }
 .user h1 {
 	margin: 0;
@@ -64,4 +65,10 @@ body {
 .posts h1, h2 {
 	display: inline-block;
 	margin: 0px;
+}
+.filterHide {
+	display: none;
+}
+.filterShow {
+	display: block;
 }

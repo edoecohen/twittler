@@ -1,7 +1,8 @@
 $(document).ready(function(){
-  var $body = $('.posts');
+  var $body = $('.posts'),
+      username = '';
   
-
+  // RANDOM TWEETS ARE CREATED
   var index = streams.home.length - 1;
   while(index >= 0){
     var tweet = streams.home[index];
@@ -14,4 +15,20 @@ $(document).ready(function(){
     $tweet.appendTo($body);
     index -= 1;
   }
+
+  // WHEN YOU CLICK ON A USER NAME
+  $('.posts h1').on('click', function(){
+    username = $(this).text();
+    $('.user').show();
+    $('.user h1').text(username);
+    $('.posts article').hide();
+    $('h1:contains(' + username + ')').parent().show();
+  });
+
+  // WHEN YOU CLICK ON THE LOGO
+  $('.navbar-brand').on('click', function(){
+    $('.posts article').show();
+    $('.user').hide();
+  });
+
 });
