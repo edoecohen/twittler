@@ -4,6 +4,7 @@
  */
 
 // set up data structures
+var filter = false;
 window.streams = {};
 streams.home = [];
 streams.users = {};
@@ -13,11 +14,27 @@ streams.users.mracus = [];
 streams.users.douglascalhoun = [];
 window.users = Object.keys(streams.users);
 
+// ADD NEW TWEET TO FEED
+var addToFeed = function(newTweet) {
+  var $tweet = $('<article><h1></h1><h2></h2><p></p></article>');
+  var username = '@' + newTweet.user;
+  var filteredName = $('.user h1').text();
+
+  $tweet.find('h1').text(username);
+  $tweet.find('h2').text('• ' + newTweet.created_at);
+  $tweet.find('p').text(newTweet.message);
+  $tweet.prependTo('.posts');
+  if($('.user').is(":visible") && username !== filteredName) {
+    $tweet.hide();
+  }
+};
+
 // utility function for adding tweets to our data structures
 var addTweet = function(newTweet){
   var username = newTweet.user;
   streams.users[username].push(newTweet);
   streams.home.push(newTweet);
+  addToFeed(newTweet);  
 };
 
 // utility function
@@ -52,7 +69,7 @@ for(var i = 0; i < 10; i++){
 
 var scheduleNextTweet = function(){
   generateRandomTweet();
-  setTimeout(scheduleNextTweet, Math.random() * 1500);
+  setTimeout(scheduleNextTweet, Math.random() * 6000);
 };
 scheduleNextTweet();
 
