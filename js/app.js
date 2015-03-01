@@ -35,6 +35,7 @@ $(document).ready(function(){
       newTweet.find('h2').text('• ' + timeCreated);
       newTweet.find('p').text(post);
       newTweet.prependTo($body);
+      $(".alert").slideDown("fast").delay(2500).slideUp("fast");
       closeBox();
       $('.new-post button').addClass('btn-disabled');
     }
@@ -68,7 +69,7 @@ $(document).ready(function(){
 
   // CLOSE POST BOX
   var closeBox = function(){
-    textarea.animate({height:"35px"}, 100);
+    textarea.css("height","35px");
     textarea.parent().find('button').hide();
   };
 
