@@ -12,7 +12,6 @@ body {
 .navbar-brand:hover {
 	color: #DFDFDF;
 }
-
 .main {
 	margin-top: 80px;
 }
@@ -24,6 +23,12 @@ body {
 	font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
 	padding: 0 0 25px 0;
 	margin-bottom: 100px;
+}
+.alert-box {
+	padding: 0;
+}
+.alert {
+	display: none;
 }
 .new-post {
 	padding: 20px;
