@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Twittler</title>
+    <link rel="shortcut icon" type="image/x-ico" href="/favicon.png"/>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
@@ -18,30 +19,27 @@
     <div class="container main">
       <div class="row">
         <div class="col-md-6 col-md-offset-3 main-col">
-          <section class="user">
-            <h1>@mracus</h1>
-          </section>
           
-          <section class="posts">
+          <form class="new-post">
 
+            <textarea class="form-control" placeholder="What's new?" name="post"></textarea>
+            <button type="submit" class="btn btn-info btn-disabled">Tweetle</button>
+            
+          </form>
           </section>
-
-
+          <section class="user">
+            <h1></h1>
+          </section>
+          <section class="posts">
+          </section>
         </div>
       </div>
-
     </div>
-
-
-
-
-
 
 <!-- SCRIPTS -->
     <script src="js/moment.min.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/data_generator.js"></script>
-    
     <script src="js/app.js"></script>
     <script src="js/bootstrap.min.js"></script>
 
