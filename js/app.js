@@ -36,6 +36,7 @@ $(document).ready(function(){
       newTweet.find('p').text(post);
       newTweet.prependTo($body);
       closeBox();
+      $('.new-post button').addClass('btn-disabled');
     }
     
     // CLEAR TEXTAREA
